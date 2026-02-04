@@ -1,0 +1,147 @@
+What factors most strongly influence order success vs failure?
+
+Why this is valuable
+
+Directly impacts revenue and customer satisfaction
+
+Helps identify operational weaknesses (vendor, platform, customer)
+
+Can guide policy changes or vendor penalties
+
+Key columns
+is_successful, reason, owner, delivery_arrangement, platform
+
+-------------------------------------------------------------------------------
+How does delivery delay affect customer experience and order outcomes?
+
+Why this is valuable
+
+Late deliveries are a major churn driver
+
+Helps define acceptable delay thresholds
+
+Supports SLA optimization
+
+Key columns
+order_delay, actual_delivery_time, promised_delivery_time, is_successful
+
+------------------------------------------------------------------------------------
+
+Which cities and zones generate the highest GMV and order volume?
+
+Why this is valuable
+
+Identifies top-performing and underperforming markets
+
+Supports expansion and resource allocation decisions
+
+Useful for regional strategy
+
+Key columns
+City, Zone, gmv_amount_lc, order_id
+
+--------------------------------------------------------------------
+
+Do promotions and discounts increase successful order completion?
+
+Why this is valuable
+
+Evaluates ROI of promotions
+
+Determines whether discounts reduce cancellations
+
+Helps optimize marketing spend
+
+Key columns
+is_affordable, affordability_amt_total, is_successful
+
+--------------------------------------------------------------------
+
+Are new customers (acquisitions) more likely to cancel orders than repeat customers?
+
+Why this is valuable
+
+Highlights onboarding and first-order experience issues
+
+Improves retention strategies
+
+Reduces wasted acquisition spend
+
+Key columns
+is_acquisition, is_successful, order_delay
+
+-----------------------------------------------------------
+
+How does order value (GMV) relate to delivery performance and delays?
+
+Why this is valuable
+
+High-value orders may need priority handling
+
+Identifies revenue at risk due to delays
+
+Supports premium delivery services
+
+Key columns
+gmv_amount_lc, order_delay, actual_delivery_time
+
+-----------------------------------------------------------------
+
+Which vendors contribute most to failed or delayed orders?
+
+Why this is valuable
+
+Enables vendor performance scoring
+
+Supports vendor training or delisting decisions
+
+Improves platform reliability
+
+Key columns
+vendor_id, is_successful, order_delay, reason
+
+-----------------------------------------------------------
+
+Does delivery distance impact delivery time and order success?
+
+Why this is valuable
+
+Helps define optimal service radius
+
+Improves routing and pricing models
+
+Reduces long-distance failure risk
+
+Key columns
+dropoff_distance_manhattan, actual_delivery_time, is_successful
+
+---------------------------------------------------------------------
+
+How do platforms (iOS, Android, Web) differ in performance and order behavior?
+
+Why this is valuable
+
+Detects app-specific issues
+
+Helps prioritize platform improvements
+
+Improves conversion and UX
+
+Key columns
+platform, is_successful, gmv_amount_lc, order_delay
+
+-------------------------------------------------------------------
+
+What are the most common reasons for order failure, and who is responsible?
+
+Why this is valuable
+
+Identifies root causes of failures
+
+Separates vendor vs customer vs platform issues
+
+Supports operational accountability
+
+Key columns
+reason, sub_reason, owner, is_successful
+
